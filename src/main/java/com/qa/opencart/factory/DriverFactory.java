@@ -32,10 +32,10 @@ public class DriverFactory {
 
 		optionsManager = new OptionsManager(prop);
 
-		highlight = prop.getProperty("highlight").trim();
+		highlight=prop.getProperty("highlight").trim();
 		String browserName = prop.getProperty("browser").toLowerCase().trim();
 
-		System.out.println("browser name is : " + browserName);
+		System.out.println("The browser name is : " + browserName);
 		
 		//chrome
 		if (browserName.equalsIgnoreCase("chrome")) {
@@ -138,7 +138,8 @@ public class DriverFactory {
 		File destination = new File(path);
 		try {
 			org.openqa.selenium.io.FileHandler.copy(srcFile, destination);
-		} catch (IOException e) {
+		} catch (IOException e) 
+		{
 			e.printStackTrace();
 		}
 		return path;
